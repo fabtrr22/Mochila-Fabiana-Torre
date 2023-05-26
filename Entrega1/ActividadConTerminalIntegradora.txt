@@ -1,0 +1,76 @@
+# Paso 1: Creando directorios DH y Películas
+
+mkdir DH DH/Películas
+
+# Paso 2: Creando cinco directorios dentro del directorio Películas
+
+mkdir DH/Películas/Infantiles DH/Películas/Accion DH/Películas/Terror DH/Películas/Comedia DH/Películas/Romanticas
+
+#Pasos 3, 4, 5, 6 y 7: Creando archivos dentro de los directorios con distintas extensiones
+
+touch Infantiles/Intenzamente.txt Infantiles/"El juego del miedo.xls" Infantiles/"Rapido y furioso.pdf" Infantiles/Titanic.jpg
+touch Accion/"Smooth criminal.txt" Accion/"Diario de una pasion.js" Accion/"El hexorcista.xls" Accion/Cars.jpg
+touch Terror/"La dama y el bagavundo.png" Terror/"Yo antes de ti.xls" Terror/"Que paso ayer.pdf" Terror/"We will rock you.js"
+touch Comedia/Madagaskar.js Comedia/"Orgullo y prejuicio.txt" Comedia/IT.xls Comedia/"Mision imposible.png"
+touch Romanticas/Pocahontas.jpg Romanticas/Annabelle.js Romanticas/"Los vengadores.js" Romanticas/"La mascara.js"
+
+#Validando estructura de archivos y directorios
+
+cd Películas
+ls -R
+
+#Integrando en VSCode
+# Moviendo archivos a las categorías correctas
+
+mv Accion/Cars.jpg Infantiles/
+mv Accion/"Diario de una pasion.js" Romanticas/
+mv Accion/"El hexorcista.xls" Terror/
+mv Comedia/IT.xls Terror/
+mv Comedia/Madagaskar.js Infantiles/
+mv Comedia/"Mision imposible.png" Accion/
+mv Comedia/"Orgullo y prejuicio.txt" Romanticas/
+mv Terror/"La dama y el bagavundo.png" Infantiles/
+mv Terror/"Que paso ayer.pdf" Comedia/
+mv Terror/"Yo antes de ti.xls" Romanticas/
+mv Infantiles/"El juego del miedo.xls" Terror/
+mv Infantiles/"Rapido y furioso.pdf" Accion/
+mv Infantiles/Titanic.jpg Romanticas/
+mv Romanticas/Annabelle.js Terror/
+mv Romanticas/"La mascara.js" Comedia/
+mv Romanticas/"Los vengadores.js" Accion/
+mv Romanticas/Pocahontas.jpg Infantiles/
+
+# Corrigiendo faltas de ortografía en archivos
+
+mv Películas/Infantiles/Madagaskar.js Películas/Infantiles/Madagascar.js
+mv Películas/Infantiles/"La dama y el bagavundo.png" Películas/Infantiles/"La dama y el vagabundo.png"
+mv Películas/Infantiles/Intenzamente.txt Películas/Infantiles/Intensamente.txt
+
+# Eliminando archivos que son canciones en un solo comando cada uno
+
+rm Películas/Terror/"We will rock you.js"
+rm Películas/Accion/"Smooth criminal.txt"
+
+# Crear archivo noBorrar.js en directorio prueba2
+
+touch Películas/Accion/prueba2/noBorrar.js
+
+# Mover archivo noBorrar.js del directorio prueba2 al directorio prueba, con un solo comando
+
+mv Accion/prueba2/noBorrar.js Romanticas/prueba/noBorrar.js
+
+#Crear archivo camadax.txt
+
+touch camadax.txt
+
+# Mover archivo IT
+
+mv Terror/IT.xls Infantiles/
+
+# Borrar archivo camadax.txt
+
+rm ../camadax.txt
+
+#Eliminar directorio prueba, en un solo comando
+
+rmdir Romanticas/prueba/
